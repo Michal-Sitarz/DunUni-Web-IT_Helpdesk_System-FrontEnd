@@ -64,7 +64,7 @@ function checkInput_Password(){
 }
 
 function login(){
-    alert('username: '+username+'\n password: '+password);
+    alert('username: '+username+'\npassword: '+password);
 }
 
 
