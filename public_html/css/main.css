@@ -1,23 +1,46 @@
 /* GLOBAL containers */
+
 body{
+    margin: 0;
+    width: 100%;
+
     font-family: Tahoma;
 } 
 
 header {
-    text-align: center;
-    color: navy;
+    height: 3em;
+    background-color: navy;
+    color: white;
+}
+header h3 {
+    margin: 0;
+    padding-top: .5em;
 }
 
 footer {
     text-align: center;
     font-size: 80%;
+
+    padding-bottom: .5em;
+
+    position: fixed;
+    bottom: 0;
+    width: inherit;
 }
 
-nav{
-    
+nav {
+
 }
+
 
 /* GLOBAL elements */
+hr{
+    margin-left: 1em;
+    margin-right: 1em;
+    border-style: solid;
+    border-color: lightblue;
+}
+
 button{
     font-family: Tahoma;
     font-size: 100%;
@@ -47,9 +70,21 @@ table{
 
 
 /* WRAPPERS & CONTAINERS */
+#header-title{
+    float: left;
+    width: 55%;
+    padding-left: 1em;
+    text-align: left;
+}
+#header-nav{
+    float: right;
+    width: 40%;
+    padding-right: 1em;
+    text-align: right;
+}
 
-#main-wrapper{
-
+#content-main-wrapper{
+    margin: 1em;
 }
 
 #login-container{
@@ -64,17 +99,22 @@ table{
 
 .center-container{
     margin: 0 auto;
-    
+
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+
     text-align: center;
 }
 
 .btn{
 
+}
+
+.btn-mainpage{
+    width: 240px;
+    height: 60px;
 }
 
 
