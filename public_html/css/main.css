@@ -112,6 +112,8 @@ h3 {
     padding: 10px;
 }
 
+    
+
 
 /* CLASSES */
 
@@ -141,7 +143,10 @@ h3 {
 #input-username, #input-password {
     text-align: left;
 }
-
+#login-container i {
+    color: grey;
+}
+    
     /* tickets' table */
     
     #tbl-tickets table{
