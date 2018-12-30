@@ -99,23 +99,7 @@ h3 {
 #content-main-wrapper{
     margin: 1rem;
 }
-    /* tickets' table */
-    
-    #content-main-wrapper table{
-        border-spacing: .5rem;
-        border-collapse: collapse;
-        width: 100%;
-    }
 
-    #content-main-wrapper td, th{
-        border: 1px solid lightblue;
-        padding: 0.5rem;
-    }
-
-    #content-main-wrapper th {
-        background-color: navy;
-        color: white;
-    }
 
 #login-container{
     width: 300px;
@@ -150,6 +134,24 @@ h3 {
 
 /* specific elements */
 
-#inputUsername, #inputPassword {
+#input-username, #input-password {
     text-align: left;
 }
+
+    /* tickets' table */
+    
+    #tbl-tickets table{
+        border-spacing: .5rem;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    #tbl-tickets td, th{
+        border: 1px solid lightblue;
+        padding: 0.5rem;
+    }
+
+    #tbl-tickets th {
+        background-color: navy;
+        color: white;
+    }
