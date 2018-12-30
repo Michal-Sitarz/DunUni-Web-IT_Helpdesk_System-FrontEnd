@@ -12,13 +12,43 @@ header {
     height: 3rem;
     background-color: navy;
     color: white;
+    
+    display: flex;
+    align-items: center;
 }
     header h3 {
         color: white;
-        margin: 0;
-        padding-top: .5rem;
     }
 
+    #header-title{
+        width: 50%;
+        padding-left: 1rem;
+    }
+    #header-nav{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+        
+        width: 50%;
+        padding-right: 1rem;
+
+    }
+
+        #header-nav > *{
+            margin-left: .25rem;
+            margin-right: .25rem;
+        }
+        #header-nav a {
+            color: white;
+        }
+        
+        #header-nav i {
+            color: deepskyblue;
+        }
+        
+    
+    
 footer {
     text-align: center;
     font-size: 80%;
@@ -31,7 +61,8 @@ footer {
 }
 
 nav {
-
+    display: flex;
+    justify-content: space-around;
 }
 
 
@@ -80,21 +111,7 @@ h3 {
 
 
 /* WRAPPERS & CONTAINERS */
-#header-title{
-    float: left;
-    width: 55%;
-    padding-left: 1rem;
-    text-align: left;
-}
-#header-nav{
-    float: right;
-    width: 40%;
-    padding-right: 1rem;
-    text-align: right;
-}
-    #header-nav a {
-        color: white;
-    }
+
 
 #search-bars{
     margin: 1rem;
@@ -135,6 +152,9 @@ h3 {
 .btn-mainpage{
     width: 240px;
     height: 60px;
+    font-size: 125%;
+    color: white;
+    background-color: grey;
 }
 
 
@@ -144,23 +164,23 @@ h3 {
     text-align: left;
 }
 #login-container i {
-    color: grey;
+    color: navy;
 }
     
-    /* tickets' table */
-    
-    #tbl-tickets table{
-        border-spacing: .5rem;
-        border-collapse: collapse;
-        width: 100%;
-    }
+/* tickets' table */
 
-    #tbl-tickets td, th{
-        border: 1px solid lightblue;
-        padding: 0.5rem;
-    }
+#tbl-tickets table{
+    border-spacing: .5rem;
+    border-collapse: collapse;
+    width: 100%;
+}
 
-    #tbl-tickets th {
-        background-color: navy;
-        color: white;
-    }
+#tbl-tickets td, th{
+    border: 1px solid lightblue;
+    padding: 0.5rem;
+}
+
+#tbl-tickets th {
+    background-color: navy;
+    color: white;
+}
