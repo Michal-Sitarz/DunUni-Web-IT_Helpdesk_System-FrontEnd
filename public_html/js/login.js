@@ -17,6 +17,8 @@ inputPassword.addEventListener("focusout",checkInput_Password);
 
 function checkForEnterKey(e){
     if(e.key === 'Enter'){
+        checkInput_Username();
+        checkInput_Password();
         login();
     }
 }
@@ -69,12 +71,22 @@ function checkInput_Password(){
 }
 
 function login(){
-    // login validation
+    //alert('username: '+username+'\npassword: '+password);
     
-
-    
-    // type of user validation
-    if(username.substr(0,2)=='a-'){
+    // login input fields validation
+    /*
+    if (username === "" || password === "" || username === "Username" || password === "Password" || username.length < 2 || !isNaN(username) || !username.includes("@")) {
+        alert("Please enter your credentials: both username and password");
+        return;
+    }
+    */
+    // login validation with DB
+    /*
+     * none for now  
+     */
+      
+    // user type deduction
+    if(username.substr(0,2)=="a-"){
         window.location = "home-a.html";
     }
     else
