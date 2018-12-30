@@ -8,11 +8,18 @@ setInputPasswordToDefault();
 
 // event listeners
 document.getElementById("btn-login").addEventListener("click",login);
+inputUsername.addEventListener("keydown",checkForEnterKey);
+inputPassword.addEventListener("keydown",checkForEnterKey);
 inputUsername.addEventListener("focus",enterInput_Username);
 inputPassword.addEventListener("focus",enterInput_Password);
 inputUsername.addEventListener("focusout",checkInput_Username);
 inputPassword.addEventListener("focusout",checkInput_Password);
 
+function checkForEnterKey(e){
+    if(e.key === 'Enter'){
+        login();
+    }
+}
 
 function setInputUsernameToDefault(){
     inputUsername.value = "Username";
@@ -62,8 +69,11 @@ function checkInput_Password(){
 }
 
 function login(){
-    alert('username: '+username+'\npassword: '+password);
+    // login validation
     
+
+    
+    // type of user validation
     if(username.substr(0,2)=='a-'){
         window.location = "home-a.html";
     }
