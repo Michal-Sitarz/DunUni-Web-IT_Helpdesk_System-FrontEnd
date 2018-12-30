@@ -65,6 +65,7 @@ function checkInput_Password(){
 
 function login(){
     alert('username: '+username+'\npassword: '+password);
+    window.location = "home.html";
 }
 
 
