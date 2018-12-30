@@ -5,23 +5,25 @@ body{
     width: 100%;
 
     font-family: Tahoma;
+
 } 
 
 header {
-    height: 3em;
+    height: 3rem;
     background-color: navy;
     color: white;
 }
-header h3 {
-    margin: 0;
-    padding-top: .5em;
-}
+    header h3 {
+        color: white;
+        margin: 0;
+        padding-top: .5rem;
+    }
 
 footer {
     text-align: center;
     font-size: 80%;
 
-    padding-bottom: .5em;
+    padding-bottom: .5rem;
 
     position: fixed;
     bottom: 0;
@@ -35,8 +37,8 @@ nav {
 
 /* GLOBAL elements */
 hr{
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 1rem;
+    margin-right: 1rem;
     border-style: solid;
     border-color: lightblue;
 }
@@ -46,7 +48,7 @@ button{
     font-size: 100%;
     width: 100px;
     height:2em;
-    margin: 1em;
+    margin: 1rem;
 }
 
 input{
@@ -68,24 +70,52 @@ table{
     margin: auto;
 }
 
+h3 {
+    color: navy;
+}
+
 
 /* WRAPPERS & CONTAINERS */
 #header-title{
     float: left;
     width: 55%;
-    padding-left: 1em;
+    padding-left: 1rem;
     text-align: left;
 }
 #header-nav{
     float: right;
     width: 40%;
-    padding-right: 1em;
+    padding-right: 1rem;
     text-align: right;
 }
+    #header-nav a {
+        color: white;
+    }
 
-#content-main-wrapper{
-    margin: 1em;
+#search-bars{
+    margin: 1rem;
 }
+    
+#content-main-wrapper{
+    margin: 1rem;
+}
+    /* tickets' table */
+    
+    #content-main-wrapper table{
+        border-spacing: .5rem;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    #content-main-wrapper td, th{
+        border: 1px solid lightblue;
+        padding: 0.5rem;
+    }
+
+    #content-main-wrapper th {
+        background-color: navy;
+        color: white;
+    }
 
 #login-container{
     width: 300px;
@@ -123,4 +153,3 @@ table{
 #inputUsername, #inputPassword {
     text-align: left;
 }
-
