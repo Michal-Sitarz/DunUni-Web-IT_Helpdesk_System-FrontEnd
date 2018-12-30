@@ -1,19 +1,17 @@
-var inputUsername = document.getElementById("inputUsername");
-var inputPassword = document.getElementById("inputPassword");
+var inputUsername = document.getElementById("input-username");
+var inputPassword = document.getElementById("input-password");
 var username = "";
 var password = "";
-
 
 setInputUsernameToDefault();
 setInputPasswordToDefault();
 
 // event listeners
-document.getElementById("btnLogin").addEventListener("click",login);
+document.getElementById("btn-login").addEventListener("click",login);
 inputUsername.addEventListener("focus",enterInput_Username);
 inputPassword.addEventListener("focus",enterInput_Password);
 inputUsername.addEventListener("focusout",checkInput_Username);
 inputPassword.addEventListener("focusout",checkInput_Password);
-
 
 
 function setInputUsernameToDefault(){
@@ -65,7 +63,15 @@ function checkInput_Password(){
 
 function login(){
     alert('username: '+username+'\npassword: '+password);
-    window.location = "home.html";
+    
+    if(username.substr(0,2)=='a-'){
+        window.location = "home-a.html";
+    }
+    else
+    {
+        window.location = "home.html";
+    }
+    
 }
 
 
