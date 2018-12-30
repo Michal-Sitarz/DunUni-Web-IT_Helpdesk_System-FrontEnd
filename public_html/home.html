@@ -12,21 +12,49 @@
                 <h3>IT Helpdesk Ticketing System</h3>
             </div>
             <div id="header-nav">
-                [hom-icn] | [usr-icn] Firstname Lastname | [log-icn] Logout
+                <a href="home.html">[hom-icn]</a> | 
+                [usr-icn] Firstname Lastname | 
+                <a href="login.html">[log-icn] Logout</a>
             </div>
         </header>
        
         <nav>
-            <button class="btn-mainpage">[?] Helpdesk Guide</button>    
-            <button class="btn-mainpage">[!] Report Incident</button>
-            <button class="btn-mainpage">[+] New Request</button>
-            <button class="btn-mainpage">[=] Ticket History</button>
+            <button class="btn-mainpage" id="btnHelpdeskGuide">[?] Helpdesk Guide</button>    
+            <button class="btn-mainpage" id="btnReportIncident">[!] Report Incident</button>
+            <button class="btn-mainpage" id="btnNewRequest">[+] New Request</button>
+            <button class="btn-mainpage" id="btnTicketsHistory">[=] Tickets History</button>
             <hr>
         </nav>
         
         <div id="content-main-wrapper">
             
-            <p>content</p>
+            <h3>Open tickets</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ticket number</th>
+                        <th>Summary / Topic</th>
+                        <th>Priority</th>
+                        <th>_</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DND0001111013</td>
+                        <td>Ticket Summary here</td>
+                        <td>normal</td>
+                        <td><a href="">Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>DND0001111013</td>
+                        <td>Ticket Summary here</td>
+                        <td>normal</td>
+                        <td><a href="">Details</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            
             
         </div>
         
