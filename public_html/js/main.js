@@ -5,7 +5,7 @@ document.getElementById("btn-new-request").addEventListener("click",loadPage_New
 document.getElementById("btn-tickets-history").addEventListener("click",loadPage_TicketsHistory);
 
 function loadPage_HelpdeskGuide(){
-    alert(" + - -- --- ----- ------- ----- --- -- - +\n\+  Helpdesk Guide available soon.  +\n\ + - -- --- ----- ------- ----- --- -- - +");
+    window.location = "helpdesk-guide.html";
 }
 
 function loadPage_ReportIncident(){

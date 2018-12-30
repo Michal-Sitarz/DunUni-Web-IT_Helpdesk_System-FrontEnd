@@ -42,6 +42,10 @@ hr{
     border-style: solid;
     border-color: lightblue;
 }
+    #content-main-wrapper hr{
+        margin-left: 0;
+        margin-right: 0;
+    }
 
 button{
     font-family: Tahoma;

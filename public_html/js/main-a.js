@@ -5,11 +5,11 @@ document.getElementById("btn-manage-users").addEventListener("click",loadPage_Ma
 document.getElementById("btn-manage-devices").addEventListener("click",loadPage_ManageDevices);
 
 function loadPage_HelpdeskGuide(){
-    alert(" + - -- --- ----- ------- ----- --- -- - +\n\+  Helpdesk Guide available soon.  +\n\ + - -- --- ----- ------- ----- --- -- - +");
+    window.location = "helpdesk-guide.html";
 }
 
 function loadPage_Analytics(){
-    alert("Analytics tools available soon...");
+    window.location = "analytics.html";
 }
 
 function loadPage_ManageUsers(){
