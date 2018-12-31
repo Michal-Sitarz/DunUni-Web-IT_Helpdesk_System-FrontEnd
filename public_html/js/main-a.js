@@ -2,18 +2,39 @@ var inputSearchBarTICKET = document.getElementById("search-bar-ticket");
 var inputSearchBarUSER = document.getElementById("search-bar-user");
 var inputSearchBarDEVICE = document.getElementById("search-bar-device");
 
-setInputSearchBarToDefault(inputSearchBarTICKET, "Search for... TICKET");
-setInputSearchBarToDefault(inputSearchBarUSER, "Search for... USER");
-setInputSearchBarToDefault(inputSearchBarDEVICE, "Search for... DEVICE");
+// search bar event handlers
+if(inputSearchBarTICKET != null){
+    inputSearchBarTICKET.addEventListener("focus",enterInputSearchBarTICKET);
+    inputSearchBarTICKET.addEventListener("focusout",checkInputSearchBarTICKET);
+    setInputSearchBarToDefault(inputSearchBarTICKET, "Search for... TICKET");
+}
+if(inputSearchBarUSER != null){
+    inputSearchBarUSER.addEventListener("focus",enterInputSearchBarUSER);
+    inputSearchBarUSER.addEventListener("focusout",checkInputSearchBarUSER);
+    setInputSearchBarToDefault(inputSearchBarUSER, "Search for... USER"); 
+}
+if(inputSearchBarDEVICE != null){
+    inputSearchBarDEVICE.addEventListener("focus",enterInputSearchBarDEVICE);
+    inputSearchBarDEVICE.addEventListener("focusout",checkInputSearchBarDEVICE);
+    setInputSearchBarToDefault(inputSearchBarDEVICE, "Search for... DEVICE");
+}
 
-// event listeners
-document.getElementById("btn-helpdesk-guide").addEventListener("click",loadPage_HelpdeskGuide);
-document.getElementById("btn-analytics").addEventListener("click",loadPage_Analytics);
-document.getElementById("btn-manage-users").addEventListener("click",loadPage_ManageUsers);
-document.getElementById("btn-manage-devices").addEventListener("click",loadPage_ManageDevices);
+// main button event listeners
+if(document.getElementById("btn-helpdesk-guide") != null){
+    document.getElementById("btn-helpdesk-guide").addEventListener("click",loadPage_HelpdeskGuide);
+}
+if(document.getElementById("btn-analytics") != null){
+    document.getElementById("btn-analytics").addEventListener("click",loadPage_Analytics);
+}
+if(document.getElementById("btn-manage-users") != null){
+    document.getElementById("btn-manage-users").addEventListener("click",loadPage_ManageUsers);
+}
+if(document.getElementById("btn-manage-devices") != null){
+    document.getElementById("btn-manage-devices").addEventListener("click",loadPage_ManageDevices);
+}
 
-inputSearchBarTICKET.addEventListener("focus",enterInputSearchBarTICKET);
-inputSearchBarTICKET.addEventListener("focusout",checkInputSearchBarTICKET);
+
+
 
 
 // load page functions
@@ -33,32 +54,36 @@ function loadPage_ManageDevices(){
     window.location = "manage-devices.html";
 }
 
-// set default appearance functions
+// search bar fields functionality
 function setInputSearchBarToDefault(element, defaultText){
     element.value = defaultText;
     element.style.color = "gray";
 }
+
 /*
-function setInputSearchBarTICKET(){
-    inputSearchBarTICKET.value = "Search for... TICKET";
-    inputSearchBarTICKET.style.color = "gray";
-}
-
-function setInputSearchBarUSER(){
-    inputSearchBarUSER.value = "Search for... USER";
-    inputSearchBarUSER.style.color = "gray";
-}
-
-function setInputSearchBarDEVICE(){
-    inputSearchBarDEVICE.value = "Search for... DEVICE";
-    inputSearchBarDEVICE.style.color = "gray";
+function enterInputSearchBar(element){
+    if(element.value === "Search for... TICKET"){
+        element.value = "";
+        element.style.color = "black";
+    }
 }
 */
-
 function enterInputSearchBarTICKET(){
     if(inputSearchBarTICKET.value === "Search for... TICKET"){
         inputSearchBarTICKET.value = "";
         inputSearchBarTICKET.style.color = "black";
+    }
+}
+function enterInputSearchBarUSER(){
+    if(inputSearchBarUSER.value === "Search for... USER"){
+        inputSearchBarUSER.value = "";
+        inputSearchBarUSER.style.color = "black";
+    }
+}
+function enterInputSearchBarDEVICE(){
+    if(inputSearchBarDEVICE.value === "Search for... DEVICE"){
+        inputSearchBarDEVICE.value = "";
+        inputSearchBarDEVICE.style.color = "black";
     }
 }
 
@@ -66,5 +91,17 @@ function checkInputSearchBarTICKET(){
     if(inputSearchBarTICKET.value === "")
     {
         setInputSearchBarToDefault(inputSearchBarTICKET, "Search for... TICKET");
+    }
+}
+function checkInputSearchBarUSER(){
+    if(inputSearchBarUSER.value === "")
+    {
+        setInputSearchBarToDefault(inputSearchBarUSER, "Search for... USER");
+    }
+}
+function checkInputSearchBarDEVICE(){
+    if(inputSearchBarDEVICE.value === "")
+    {
+        setInputSearchBarToDefault(inputSearchBarDEVICE, "Search for... DEVICE");
     }
 }

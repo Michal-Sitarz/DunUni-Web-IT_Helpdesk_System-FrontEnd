@@ -115,6 +115,9 @@ h3 {
 
 #search-bars{
     margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
 }
     
 #content-main-wrapper{
@@ -155,6 +158,15 @@ h3 {
     font-size: 125%;
     color: white;
     background-color: grey;
+}
+
+.btn-search{
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    color: white;
 }
 
 
