@@ -1,16 +1,19 @@
+/* RESPONSIVE DESIGN: Media Queries*/
+
+
+
 /* GLOBAL containers */
 
 body{
     margin: 0;
     width: 100%;
 
-    font-family: Tahoma;
-
+    font-family: Tahoma, sans-serif;
 } 
 
 header {
     height: 3rem;
-    background-color: navy;
+    background-color: #2F5496; /*navy*/
     color: white;
     
     display: flex;
@@ -44,7 +47,7 @@ header {
         }
         
         #header-nav i {
-            color: deepskyblue;
+            color: #00B0F0; /*deepskyblue*/
         }
         
     
@@ -106,7 +109,7 @@ table{
 }
 
 h3 {
-    color: navy;
+    color: #2F5496; /*navy*/
 }
 
 
@@ -127,8 +130,8 @@ h3 {
 
 #login-container{
     width: 300px;
-    height: 240px;
-    border: 2px solid grey;
+    height: 280px;
+    border: 1px solid #2F5496; /*lightblue*/;
     padding: 10px;
 }
 
@@ -149,7 +152,7 @@ h3 {
 }
 
 .btn{
-
+    color: white;
 }
 
 .btn-mainpage{
@@ -176,7 +179,34 @@ h3 {
     text-align: left;
 }
 #login-container i {
-    color: navy;
+    color: #2F5496; /*navy*/
+}
+
+/* buttons colours */
+#btn-login{
+    background-color: #798093; /*grey*/
+}
+
+#btn-helpdesk-guide{
+    background-color: #31B8F2; /*cornflowerblue*/
+}
+#btn-analytics{
+    background-color: #F59D56; /*coral*/
+}
+#btn-manage-devices,#btn-manage-users{
+    background-color: #0070C0; /*darkslateblue*/
+}
+#btn-add-new-device,#btn-add-new-user{
+    background-color: #0070C0; /*hotpink*/
+}
+#btn-report-incident{
+    background-color: #C05046; /*firebrick*/
+}
+#btn-new-request{
+    background-color: #9DA558; /*forestgreen*/
+}
+#btn-tickets-history{
+    background-color: #9DA5B5; /*teal*/
 }
     
 /* tickets' table */
@@ -188,11 +218,11 @@ h3 {
 }
 
 #tbl-tickets td, th{
-    border: 1px solid lightblue;
+    border: 1px solid #00B0F0; /*lightblue*/;
     padding: 0.5rem;
 }
 
 #tbl-tickets th {
-    background-color: navy;
+    background-color: #2F5496; /*navy*/
     color: white;
 }

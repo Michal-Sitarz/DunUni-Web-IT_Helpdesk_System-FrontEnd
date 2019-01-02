@@ -19,7 +19,7 @@ if(inputSearchBarDEVICE != null){
     setInputSearchBarToDefault(inputSearchBarDEVICE, "Search for... DEVICE");
 }
 
-// main button event listeners
+// main buttons event listeners
 if(document.getElementById("btn-helpdesk-guide") != null){
     document.getElementById("btn-helpdesk-guide").addEventListener("click",loadPage_HelpdeskGuide);
 }
@@ -32,8 +32,12 @@ if(document.getElementById("btn-manage-users") != null){
 if(document.getElementById("btn-manage-devices") != null){
     document.getElementById("btn-manage-devices").addEventListener("click",loadPage_ManageDevices);
 }
-
-
+if(document.getElementById("btn-add-new-user") != null){
+    document.getElementById("btn-add-new-user").addEventListener("click",loadPage_AddNewUSER);
+}
+if(document.getElementById("btn-add-new-device") != null){
+    document.getElementById("btn-add-new-device").addEventListener("click",loadPage_AddNewDEVICE);
+}
 
 
 
@@ -53,6 +57,15 @@ function loadPage_ManageUsers(){
 function loadPage_ManageDevices(){
     window.location = "manage-devices.html";
 }
+
+function loadPage_AddNewUSER(){
+    window.location = "manage-users-add-new.html";
+}
+
+function loadPage_AddNewDEVICE(){
+    window.location = "manage-devices-add-new.html";
+}
+
 
 // search bar fields functionality
 function setInputSearchBarToDefault(element, defaultText){
