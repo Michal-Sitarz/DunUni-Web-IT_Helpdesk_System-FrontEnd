@@ -151,6 +151,10 @@ h3 {
     text-align: center;
 }
 
+.highlight{
+    color: orangered;
+}
+
 .btn{
     color: white;
     background-color: #798093; /*grey*/
