@@ -43,7 +43,7 @@ if(document.getElementById("btn-add-new-device") != null){
 
 // load page functions
 function loadPage_HelpdeskGuide(){
-    window.location = "helpdesk-guide.html";
+    window.location = "helpdesk-guide-a.html";
 }
 
 function loadPage_Analytics(){
