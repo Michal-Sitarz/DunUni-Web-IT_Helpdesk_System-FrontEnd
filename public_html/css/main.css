@@ -1,5 +1,18 @@
-/* RESPONSIVE DESIGN: Media Queries*/
+/* RESPONSIVE DESIGN for small and large displays */
 
+@media (min-width: 668px) {
+    #content-wrapper{
+        margin: 1rem;
+    }
+}
+
+@media (min-width: 1441px) {
+    
+    #content-wrapper, nav{
+        width:1000px; 
+        margin: 0 auto;
+    }
+}
 
 
 /* GLOBAL containers */
@@ -7,7 +20,6 @@
 body{
     margin: 0;
     width: 100%;
-
     font-family: Tahoma, sans-serif;
 } 
 
@@ -76,7 +88,7 @@ hr{
     border-style: solid;
     border-color: lightblue;
 }
-    #content-main-wrapper hr{
+    #content-wrapper hr{
         margin-left: 0;
         margin-right: 0;
     }
@@ -123,8 +135,8 @@ h3 {
     align-items: center
 }
     
-#content-main-wrapper{
-    margin: 1rem;
+#content-wrapper{
+
 }
 
 
