@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/font-awesome-all.css">
     </head>
     <body>
+        <header id="fake-header"></header>
         <header>
             <div id="header-title">
                 <h3>IT Helpdesk Ticketing System</h3>
@@ -19,47 +20,48 @@
                 <a href="login.html"><i class="fas fa-power-off fa-lg"></i> Logout</a>
             </div>
         </header>
-       
-        <nav>
-            <button class="btn-mainpage" id="btn-helpdesk-guide">[?] Helpdesk Guide</button>    
-            <button class="btn-mainpage" id="btn-report-incident">[!] Report Incident</button>
-            <button class="btn-mainpage" id="btn-new-request">[+] New Request</button>
-            <button class="btn-mainpage" id="btn-tickets-history">[=] Tickets History</button>
-        </nav>
-        <hr>
-        
-        <div id="content-wrapper">
-            
-            <h3>Open tickets</h3>
-            <div id="tbl-tickets">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Ticket number</th>
-                            <th>Topic</th>
-                            <th>Date created</th>
-                            <th>Priority</th>
-                            <th>...</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>DND0001111013</td>
-                            <td>Ticket Topic here</td>
-                            <td>19/09/2019</td>
-                            <td>normal</td>
-                            <td><a href="">Details</a></td>
-                        </tr>
-                        <tr>
-                            <td>DND0001111013</td>
-                            <td>Ticket Topic here</td>
-                            <td>19/09/2019</td>
-                            <td>normal</td>
-                            <td><a href="">Details</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            
+        <div id="main-wrapper">
+            <nav>
+                <button class="btn-mainpage" id="btn-helpdesk-guide">[?] Helpdesk Guide</button>    
+                <button class="btn-mainpage" id="btn-report-incident">[!] Report Incident</button>
+                <button class="btn-mainpage" id="btn-new-request">[+] New Request</button>
+                <button class="btn-mainpage" id="btn-tickets-history">[=] Tickets History</button>
+            </nav>
+            <hr>
+
+            <div id="content-wrapper">
+
+                <h3>Open tickets</h3>
+                <div id="tbl-tickets">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ticket number</th>
+                                <th>Topic</th>
+                                <th>Date created</th>
+                                <th>Priority</th>
+                                <th>...</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DND0001111013</td>
+                                <td>Ticket Topic here</td>
+                                <td>19/09/2019</td>
+                                <td>normal</td>
+                                <td><a href="">Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>DND0001111013</td>
+                                <td>Ticket Topic here</td>
+                                <td>19/09/2019</td>
+                                <td>normal</td>
+                                <td><a href="">Details</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
             </div>
         </div>
         
@@ -67,6 +69,7 @@
             <hr>
             &copy; DoverFS - Dundee IT - 2018
         </footer>
+        
         <script src="js/main.js"></script>
     </body>
 </html>

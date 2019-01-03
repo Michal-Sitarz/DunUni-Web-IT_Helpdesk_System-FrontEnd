@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/font-awesome-all.css">   
     </head>
     <body>
+        <header id="fake-header"></header>
         <header>
             <div id="header-title">
                 <h3>IT Helpdesk Ticketing System</h3>
@@ -19,69 +20,70 @@
                 <a href="login.html"><i class="fas fa-power-off fa-lg"></i> Logout</a>
             </div>
         </header>
-       
-        <nav>
-            <button class="btn-mainpage" id="btn-helpdesk-guide">[?] Helpdesk Guide</button>    
-            <button class="btn-mainpage" id="btn-analytics">[$] Analytics</button>
-            <button class="btn-mainpage" id="btn-manage-users">[@] Manage Users</button>
-            <button class="btn-mainpage" id="btn-manage-devices">[#] Manage Devices</button>
-        </nav>
-        <hr>
-        
-        <div id="search-bars">
-            <div>
-                <input id="search-bar-ticket" type="text">
-                <button class="btn-search">
-                    <i class="fas fa-search fa-lg"></i>
-                </button>
+        <div id="main-wrapper">
+            <nav>
+                <button class="btn-mainpage" id="btn-helpdesk-guide">[?] Helpdesk Guide</button>    
+                <button class="btn-mainpage" id="btn-analytics">[$] Analytics</button>
+                <button class="btn-mainpage" id="btn-manage-users">[@] Manage Users</button>
+                <button class="btn-mainpage" id="btn-manage-devices">[#] Manage Devices</button>
+            </nav>
+            <hr>
+
+            <div id="search-bars">
+                <div>
+                    <input id="search-bar-ticket" type="text">
+                    <button class="btn-search">
+                        <i class="fas fa-search fa-lg"></i>
+                    </button>
+                </div>
+                <div>
+                    <input id="search-bar-user" type="text">
+                    <button class="btn-search">
+                        <i class="fas fa-search fa-lg"></i>
+                    </button>
+                </div>
+                <div>
+                    <input id="search-bar-device" type="text">
+                    <button class="btn-search">
+                        <i class="fas fa-search fa-lg"></i>
+                    </button>
+                </div>
             </div>
-            <div>
-                <input id="search-bar-user" type="text">
-                <button class="btn-search">
-                    <i class="fas fa-search fa-lg"></i>
-                </button>
-            </div>
-            <div>
-                <input id="search-bar-device" type="text">
-                <button class="btn-search">
-                    <i class="fas fa-search fa-lg"></i>
-                </button>
-            </div>
-        </div>
-        <hr>
-        
-        <div id="content-wrapper">
-            
-            <h3>Open tickets</h3>
-            <div id="tbl-tickets">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Ticket number</th>
-                            <th>Topic</th>
-                            <th>Date created</th>
-                            <th>Priority</th>
-                            <th>...</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>DND0001111013</td>
-                            <td>Ticket Topic here</td>
-                            <td>19/09/2019</td>
-                            <td>normal</td>
-                            <td><a href="">Details</a></td>
-                        </tr>
-                        <tr>
-                            <td>DND0001111013</td>
-                            <td>Ticket Topic here</td>
-                            <td>19/09/2019</td>
-                            <td>normal</td>
-                            <td><a href="">Details</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            
+            <hr>
+
+            <div id="content-wrapper">
+
+                <h3>Open tickets</h3>
+                <div id="tbl-tickets">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ticket number</th>
+                                <th>Topic</th>
+                                <th>Date created</th>
+                                <th>Priority</th>
+                                <th>...</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DND0001111013</td>
+                                <td>Ticket Topic here</td>
+                                <td>19/09/2019</td>
+                                <td>normal</td>
+                                <td><a href="">Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>DND0001111013</td>
+                                <td>Ticket Topic here</td>
+                                <td>19/09/2019</td>
+                                <td>normal</td>
+                                <td><a href="">Details</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
             </div>
         </div>
         
@@ -89,6 +91,7 @@
             <hr>
             &copy; DoverFS - Dundee IT - 2018
         </footer>
+        
         <script src="js/main-a.js"></script>
     </body>
 </html>

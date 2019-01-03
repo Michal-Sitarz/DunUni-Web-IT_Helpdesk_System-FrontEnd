@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/font-awesome-all.css">
     </head>
     <body>
+        <header id="fake-header"></header>
         <header>
             <div id="header-title">
                 <h3>IT Helpdesk Ticketing System</h3>
@@ -20,59 +21,60 @@
                 <a href="login.html"><i class="fas fa-power-off fa-lg"></i> Logout</a>
             </div>
         </header>
+        <div id="main-wrapper">
        
-        <nav>
-            <button class="btn-mainpage" id="btn-add-new-device">[+] Add New Device</button>    
-            <div id="search-bars">
-                <div>
-                    <input id="search-bar-device" type="text">
-                    <button class="btn-search">
-                        <i class="fas fa-search fa-lg"></i>
-                    </button>
+            <nav>
+                <button class="btn-mainpage" id="btn-add-new-device">[+] Add New Device</button>    
+                <div id="search-bars">
+                    <div>
+                        <input id="search-bar-device" type="text">
+                        <button class="btn-search">
+                            <i class="fas fa-search fa-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <hr>
+
+            <div id="content-wrapper">
+
+                <h3>List of all devices</h3>
+                <div id="tbl-tickets">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Hostname</th>
+                                <th>Type</th>
+                                <th>Owner (User)</th>
+                                <th>...</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DUNFD0001</td>
+                                <td>Desktop PC</td>
+                                <td>Ted Testovny</td>
+                                <td><a href="">More</a></td>
+                            </tr>
+                            <tr>
+                                <td>DUNFD0007</td>
+                                <td>Desktop PC</td>
+                                <td>Ted Testovny</td>
+                                <td><a href="">More</a></td>
+                            </tr>
+                            <tr>
+                                <td>DUNFL0002</td>
+                                <td>Laptop</td>
+                                <td>Ted Testovny</td>
+                                <td><a href="">More</a></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
                 </div>
             </div>
-        </nav>
-        <hr>
-        
-        <div id="content-wrapper">
-            
-            <h3>List of all devices</h3>
-            <div id="tbl-tickets">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Hostname</th>
-                            <th>Type</th>
-                            <th>Owner (User)</th>
-                            <th>...</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>DUNFD0001</td>
-                            <td>Desktop PC</td>
-                            <td>Ted Testovny</td>
-                            <td><a href="">More</a></td>
-                        </tr>
-                        <tr>
-                            <td>DUNFD0007</td>
-                            <td>Desktop PC</td>
-                            <td>Ted Testovny</td>
-                            <td><a href="">More</a></td>
-                        </tr>
-                        <tr>
-                            <td>DUNFL0002</td>
-                            <td>Laptop</td>
-                            <td>Ted Testovny</td>
-                            <td><a href="">More</a></td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            
-            </div>
         </div>
-        
         <footer>
             <hr>
             &copy; DoverFS - Dundee IT - 2018
