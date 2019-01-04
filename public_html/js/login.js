@@ -72,8 +72,6 @@ function checkInput_Password(){
 }
 
 function login(){
-    //alert('username: '+username+'\npassword: '+password);
-    
     // login input fields validation
     /*
     if (username === "" || password === "" || username === "Username" || password === "Password" || username.length < 2 || !isNaN(username) || !username.includes("@")) {
