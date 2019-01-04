@@ -133,7 +133,6 @@ h3 {
 
 /* WRAPPERS & CONTAINERS */
 
-
 #search-bars{
     margin: 1rem;
     display: flex;
@@ -156,7 +155,10 @@ h3 {
 #IT-ticket h3{
     color: navy;
 }
-    
+#IT-ticket td{
+    width: 30%;
+    border: solid 1px grey;
+}
 
 
 /* CLASSES */
@@ -239,7 +241,7 @@ h3 {
     background-color: #9DA5B5; /*teal*/
 }
     
-/* tickets' table */
+/* tickets list table */
 
 #tbl-tickets table{
     border-spacing: .5rem;
