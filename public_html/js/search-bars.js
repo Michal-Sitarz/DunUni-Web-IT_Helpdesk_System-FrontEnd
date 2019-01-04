@@ -10,7 +10,7 @@ if(inputSearchBarTICKET != null){
     setInputSearchBarToDefault(inputSearchBarTICKET, "Search for... TICKET");
     
     let inputSearchButtonTICKET = document.getElementById("search-bar-ticket").nextElementSibling;
-    inputSearchButtonTICKET.addEventListener("click",searchForTICKET);
+        inputSearchButtonTICKET.addEventListener("click",searchForTICKET);
 }
 if(inputSearchBarUSER != null){
     inputSearchBarUSER.addEventListener("focus",enterInputSearchBarUSER);
@@ -18,7 +18,7 @@ if(inputSearchBarUSER != null){
     setInputSearchBarToDefault(inputSearchBarUSER, "Search for... USER");
     
     let inputSearchButtonUSER = document.getElementById("search-bar-user").nextElementSibling;
-    inputSearchButtonUSER.addEventListener("click",searchForUSER);
+        inputSearchButtonUSER.addEventListener("click",searchForUSER);
 }
 if(inputSearchBarDEVICE != null){
     inputSearchBarDEVICE.addEventListener("focus",enterInputSearchBarDEVICE);
@@ -26,7 +26,7 @@ if(inputSearchBarDEVICE != null){
     setInputSearchBarToDefault(inputSearchBarDEVICE, "Search for... DEVICE");
     
     let inputSearchButtonDEVICE = document.getElementById("search-bar-device").nextElementSibling;
-    inputSearchButtonDEVICE.addEventListener("click",searchForDEVICE);
+        inputSearchButtonDEVICE.addEventListener("click",searchForDEVICE);
 }
 
 
