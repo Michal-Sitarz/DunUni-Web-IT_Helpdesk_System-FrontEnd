@@ -8,6 +8,7 @@ setInputPasswordToDefault();
 
 // event listeners
 document.getElementById("btn-login").addEventListener("click",login);
+document.getElementsByTagName("a")[0].addEventListener("click",forgetPassword);
 inputUsername.addEventListener("keydown",checkForEnterKey);
 inputPassword.addEventListener("keydown",checkForEnterKey);
 inputUsername.addEventListener("focus",enterInput_Username);
@@ -96,4 +97,6 @@ function login(){
     
 }
 
-
+function forgetPassword(){
+    alert("Contact your local IT Support team to reset your password.");
+}
