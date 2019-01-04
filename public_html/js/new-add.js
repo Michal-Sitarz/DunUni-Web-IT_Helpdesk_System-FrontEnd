@@ -30,16 +30,8 @@ function submitNewDevice(){
 }
 
 function clearInputFields(){
-    if (addNewUser != null){
-        document.getElementById("add-new-user-first-name").value="";
-        document.getElementById("add-new-user-last-name").value="";
-        document.getElementById("add-new-user-email").value="";
-        document.getElementById("add-new-user-password").value="";
-    }
-    if(addNewDevice != null){
-        document.getElementById("add-new-device-hostname").value="";
-        document.getElementById("add-new-device-type").value="";
-        document.getElementById("add-new-device-serial-number").value="";
-        document.getElementById("add-new-device-owner").value="";
+    let allInputFields = document.getElementsByClassName("input-add-new");
+    for(let i=0; i<allInputFields.length; i++){
+        allInputFields[i].value = "";
     }
 }
