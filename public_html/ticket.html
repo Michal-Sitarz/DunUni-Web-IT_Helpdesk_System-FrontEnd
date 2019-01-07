@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/ticket.css">
         <!-- FontAwesowe @ local CSS folder -->
         <link rel="stylesheet" href="css/font-awesome-all.css">
     </head>
@@ -28,7 +29,7 @@
                 <div id="ticket">
                     <div id="ticket-header">
                         <h3>Ticket No.: 009905</h3>
-                        
+                        <label>Type: </label><span>Request</span>
                         <label>Topic: </label><input id="ticket-input-topic">
                         <label>Category: </label>
                         <select id="ticket-menuinput-category">
@@ -41,18 +42,38 @@
                     </div>
                     <hr>
                     <div id="ticket-body">
-                        <div id="ticket-body-col_1-left">
+                        <div id="ticket-body-col-left">
+                            <label>Description:</label>
+                            <textarea></textarea>
                             
                         </div>
-                        <div id="ticket-body-col_2-mid">
-                            
-                        </div>
-                        <div id="ticket-body-col_3-right">
-                            
+                        <div id="ticket-body-col-right">
+                            <table>
+                                <tr>
+                                    <td>Details:</td>
+                                    <td><input></td>
+                                </tr>
+                                <tr>
+                                    <td>Assigned to:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Status: </td>
+                                    <td><select>
+                                            <option>Submitted</option>
+                                            <option>Open</option>
+                                            <option>Active</option>
+                                            <option>Closed</option>
+                                            <option>Cancelled</option>
+                                        </select></td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                     
                     <div id="ticket-footer">
+                        <button id="btn-ticket-print-pdf">Clear</button>
+                        <button id="btn-ticket-submit" class="btn">Submit</button>
                         <button id="btn-ticket-print-pdf">Print PDF</button>
                     </div>
                     <hr>
@@ -61,7 +82,7 @@
                         
                         <div id="note-new">
                             <textarea id="note-new-text"></textarea>
-                            <button id="btn-add-new-note">Post</button>
+                            <button id="btn-ticket-note-add-new">Post</button>
                         </div>
                         <div id="note">
                             <div id="note-stamp">19/09/2019<br>Ted Testovny</div>
