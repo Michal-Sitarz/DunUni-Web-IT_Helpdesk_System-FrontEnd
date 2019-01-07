@@ -6,18 +6,9 @@
     #ticket-header label {
         color: navy;
     }
-    
-    #ticket-header select{
-        height: 2em;
-        font-size: 1em;
-    }
-    
-    #ticket-header input, #ticket-header span{
-        margin-right: 1em;
-    }
 
-    #ticket-input-topic {
-        width: 50%;
+    #ticket-header input {
+        width: 55%;
     }
     
 
@@ -25,7 +16,7 @@
     display: flex;
     justify-content: space-between;
 }
-    #ticket-body-col-left, #ticket-body-col-right{ background-color: #b3ecff;
+    #ticket-body-col-left, #ticket-body-col-right{ /*background-color: #b3ecff;*/
         width: 49%;
         height: 300px;
     }
@@ -54,45 +45,75 @@
     #ticket-body input{
         height: auto;
     }
-    #ticket-body i{
-        color: grey;
-    }
     #ticket-body select{
         height: 1.5em;
         font-size: 1em;
     }
+    #ticket-body i{
+        color: lightblue;
+    }
+    #ticket-select-category-help-icon{
+        
+    }
+    #ticket-select-category-help-popup{
+        
+    }
     
+    /* POPUP HELP BOX for 'ticket status' categories */
     
+    /* Popup-box container */
+    .ticket-help-popup{
+        position: relative;
+        display: inline-block;
+    }
+    /* Popup-box (actual popup) */
+    .ticket-help-popup .ticket-help-popup-text{
+        /* positioning & visibility */
+        visibility: hidden;
+        position: absolute;
+        z-index: 1;
+        width: 235px;
+        margin-left: 5px;
+        margin-top: -3.5em;
+        /* box (look) */
+        background-color: lightblue;
+        border-radius: 5px;
+        /* text (look) */
+        color: navy;
+        font-family: Tahoma;
+        font-size: .8em;
+        padding: .5em;
+    }
+    /* Popup-box arrow */
+    .ticket-help-popup .ticket-help-popup-text::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -8px;
+        left: -8px;
+        margin-left: -8px;
+        border-width: 8px;
+        border-style: solid;
+        border-color: transparent lightblue transparent transparent;
+        
+    }
+    /* Toggle this class - hide and show the popup */
+    .ticket-help-popup .show-help-box{
+        visibility: visible;
+    }
+
     
     #btn-ticket-submit{
         background-color: #0070C0; /*darkslateblue*/
+        margin: .5em;
     }
     
 
-#ticket-footer{
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    
-    margin-top: 1em;
-    margin-bottom: 2em;
-    
-}
-    #ticket-footer button{
-        margin: 0;
-    }
-    #btn-ticket-print-pdf{
-        font-size: 80%;
-        width: auto;
-        height: min-content;
-        color: grey;
-    }
 
 
 /* TICKET: notes*/
 #ticket-notes{
-    
+    margin-top: 1.5em;
 }
 
 #ticket-notes h3{
