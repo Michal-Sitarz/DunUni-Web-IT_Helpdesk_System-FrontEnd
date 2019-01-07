@@ -6,6 +6,12 @@
     #ticket-header label {
         color: navy;
     }
+    
+    #ticket-header select{
+        height: 2em;
+        font-size: 1em;
+    }
+    
     #ticket-header input, #ticket-header span{
         margin-right: 1em;
     }
@@ -13,32 +19,47 @@
     #ticket-input-topic {
         width: 50%;
     }
-
-    #ticket-menuinput-category{
-        height: 2em;
-        font-size: 1em;
-    }
+    
 
 #ticket-body{
     display: flex;
     justify-content: space-between;
 }
-    #ticket-body-col-left, #ticket-body-col-right{ background-color: lightyellow;
-        height: 300px; width: 49%;
-
+    #ticket-body-col-left, #ticket-body-col-right{ background-color: #b3ecff;
+        width: 49%;
+        height: 300px;
+    }
+    #ticket-body-col-right{
+        padding-top: 1em;
+        height: min-content;
     }
     #ticket-body textarea{
-            width: 95%;
-            height: 90%;
+        width: 95%;
+        height: 90%;
+        margin-top: .25em;
     }
     #ticket-body table{
         margin: 0;
     }
-    #ticket-body td{ background-color: lightgrey;
+    #ticket-body table > *, #ticket-body label{
+        color: navy;
+    }
+    #ticket-body td{ /*background-color: lightgrey;*/
         height: 1.5em;
+        padding-left: .5em;
+    }
+    .td-data{
+        color: black;
     }
     #ticket-body input{
         height: auto;
+    }
+    #ticket-body i{
+        color: grey;
+    }
+    #ticket-body select{
+        height: 1.5em;
+        font-size: 1em;
     }
     
     

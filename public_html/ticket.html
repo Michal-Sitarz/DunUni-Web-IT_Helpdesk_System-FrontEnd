@@ -50,24 +50,31 @@
                         <div id="ticket-body-col-right">
                             <table>
                                 <tr>
-                                    <td>Details:</td>
-                                    <td><input></td>
+                                    <td>Raised by:</td>
+                                    <td id="ticket-username" class="td-data">Firstname Lastname</td>
                                 </tr>
                                 <tr>
                                     <td>Assigned to:</td>
-                                    <td></td>
+                                    <td id="ticket-assigned-to" class="td-data">Ted Testovny</td>
                                 </tr>
                                 <tr>
-                                    <td>Status: </td>
-                                    <td><select>
+                                    <td>Status:</td>
+                                    <td>
+                                        <select id="ticket-status-selected">
                                             <option>Submitted</option>
                                             <option>Open</option>
                                             <option>Active</option>
                                             <option>Closed</option>
                                             <option>Cancelled</option>
-                                        </select></td>
+                                        </select>
+                                        <i class="far fa-question-circle"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><hr></td>
                                 </tr>
                             </table>
+                            
                         </div>
                     </div>
                     
