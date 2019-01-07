@@ -152,13 +152,10 @@ h3 {
     padding: 10px;
 }
 
-#IT-ticket h3{
+#ticket h3{
     color: navy;
 }
-#IT-ticket td{
-    width: 30%;
-    border: solid 1px grey;
-}
+
 
 
 /* CLASSES */
@@ -243,18 +240,18 @@ h3 {
     
 /* tickets list table */
 
-#tbl-tickets table{
+#tbl-tickets-list table{
     border-spacing: .5rem;
     border-collapse: collapse;
     width: 100%;
 }
 
-#tbl-tickets td, th{
+#tbl-tickets-list td, th{
     border: 1px solid #00B0F0; /*lightblue*/;
     padding: 0.5rem;
 }
 
-#tbl-tickets th {
+#tbl-tickets-list th {
     background-color: #2F5496; /*navy*/
     color: white;
 }
