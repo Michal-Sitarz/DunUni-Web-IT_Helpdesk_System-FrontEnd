@@ -19,3 +19,4 @@ function loadPage_NewRequest(){
 function loadPage_TicketsHistory(){
     window.location = "historical-tickets.html";
 }
+
