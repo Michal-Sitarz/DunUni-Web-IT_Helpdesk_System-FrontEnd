@@ -1,6 +1,6 @@
 var helpTicketStatus = document.getElementById("ticket-select-category-help-icon");
 var allInputFields = document.getElementsByTagName("input");
-var allTextFields = document.getElementsByTagName("textarea");
+var allTicketTextFields = document.getElementById("ticket-body").getElementsByTagName("textarea");
 var allSelectFields = document.getElementsByTagName("select");
 
 
@@ -9,6 +9,7 @@ var allSelectFields = document.getElementsByTagName("select");
 helpTicketStatus.addEventListener("mouseover",toggleHelpDisplay);
 helpTicketStatus.addEventListener("mouseout",toggleHelpDisplay);
 document.getElementById("btn-ticket-submit").addEventListener("click",submitTicket);
+document.getElementById("btn-ticket-cancel").addEventListener("click",cancelTicket);
 document.getElementById("btn-ticket-note-add-new").addEventListener("click",postNewNote);
 
 function toggleHelpDisplay(){
@@ -17,29 +18,12 @@ function toggleHelpDisplay(){
 }
 
 function submitTicket(){
-    //validate all fields
-    alert("New ticket has been raised."); // and add new ticket entry to DB
-    // clear fields
-    clearAllUserInputFields();
-}
-
-/* >>>>>>>>>>>>>>>>>>> DELETE <<<<<<<<<<<<<<<<< */
-function submitNewUser(){
-    if(validateInputFields() === true){
-        alert("New User: "
-                +document.getElementById("add-new-user-first-name").value
-                +" "
-                +document.getElementById("add-new-user-last-name").value
-                +" has been added to the database.");
-        //assign values to User object and update a database
-        clearInputFields();
-    }
-    else{
-        alert("Please fill in all the fields (all fields are mandatory!).");
+    if(validateAllUserInputFields() === true){
+        alert("New ticket has been raised."); // and add new ticket entry to DB
+        // clear fields
+        clearAllUserInputFields();
     }
 }
-/* >>>>>>>>>>>>>>>>>>> DELETE <<<<<<<<<<<<<<<<< */
-
 
 function postNewNote(){
     let noteText = document.getElementById("note-new-text").value;    
@@ -86,6 +70,19 @@ function getCurrentTimeDate(){
 function validateAllUserInputFields(){
     for(let i=0; i<allInputFields.length; i++){
         if(allInputFields[i].value == ""){
+            alert("Please complete all the information - all fields are mandatory!");
+            return false;
+        }
+    }
+    for(let i=0; i<allTicketTextFields.length; i++){
+        if(allTicketTextFields[i].value == ""){
+            alert("Please provide description.");
+            return false;
+        }
+    }
+    for(let i=0; i<allSelectFields.length; i++){
+        if(allSelectFields[i].value == "none-chosen"){
+            alert("Please select one of the options provided from a dropdown menu.");
             return false;
         }
     }
@@ -96,10 +93,14 @@ function clearAllUserInputFields(){
     for(let i=0; i<allInputFields.length; i++){
         allInputFields[i].value = "";
     }
-    for(let i=0; i<allTextFields.length; i++){
-        allTextFields[i].value = "";
+    for(let i=0; i<allTicketTextFields.length; i++){
+        allTicketTextFields[i].value = "";
     }
     for(let i=0; i<allSelectFields.length; i++){
         allSelectFields[i].value = "none-chosen";
     }
+}
+
+function cancelTicket(){
+    window.location = "home.html";
 }
