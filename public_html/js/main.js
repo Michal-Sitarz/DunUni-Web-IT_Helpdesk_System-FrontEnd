@@ -9,11 +9,11 @@ function loadPage_HelpdeskGuide(){
 }
 
 function loadPage_ReportIncident(){
-    window.location = "ticket.html";
+    window.location = "ticket-new-incident.html";
 }
 
 function loadPage_NewRequest(){
-    window.location = "ticket.html";
+    window.location = "ticket-new-request.html";
 }
 
 function loadPage_TicketsHistory(){
