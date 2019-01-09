@@ -1,4 +1,9 @@
 var helpTicketStatus = document.getElementById("ticket-select-category-help-icon");
+var allInputFields = document.getElementsByTagName("input");
+var allTextFields = document.getElementsByTagName("textarea");
+var allSelectFields = document.getElementsByTagName("select");
+
+
 
 // event listeners
 helpTicketStatus.addEventListener("mouseover",toggleHelpDisplay);
@@ -15,7 +20,26 @@ function submitTicket(){
     //validate all fields
     alert("New ticket has been raised."); // and add new ticket entry to DB
     // clear fields
+    clearAllUserInputFields();
 }
+
+/* >>>>>>>>>>>>>>>>>>> DELETE <<<<<<<<<<<<<<<<< */
+function submitNewUser(){
+    if(validateInputFields() === true){
+        alert("New User: "
+                +document.getElementById("add-new-user-first-name").value
+                +" "
+                +document.getElementById("add-new-user-last-name").value
+                +" has been added to the database.");
+        //assign values to User object and update a database
+        clearInputFields();
+    }
+    else{
+        alert("Please fill in all the fields (all fields are mandatory!).");
+    }
+}
+/* >>>>>>>>>>>>>>>>>>> DELETE <<<<<<<<<<<<<<<<< */
+
 
 function postNewNote(){
     let noteText = document.getElementById("note-new-text").value;    
@@ -56,4 +80,26 @@ function getCurrentTimeDate(){
     date = date + "/" + month + "/" + currentDate.getFullYear();
     
     return time + " @ " + date;
+}
+
+
+function validateAllUserInputFields(){
+    for(let i=0; i<allInputFields.length; i++){
+        if(allInputFields[i].value == ""){
+            return false;
+        }
+    }
+    return true;
+}
+
+function clearAllUserInputFields(){
+    for(let i=0; i<allInputFields.length; i++){
+        allInputFields[i].value = "";
+    }
+    for(let i=0; i<allTextFields.length; i++){
+        allTextFields[i].value = "";
+    }
+    for(let i=0; i<allSelectFields.length; i++){
+        allSelectFields[i].value = "none-chosen";
+    }
 }
