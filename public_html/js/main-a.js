@@ -6,6 +6,9 @@ if(document.getElementById("btn-helpdesk-guide") != null){
 if(document.getElementById("btn-analytics") != null){
     document.getElementById("btn-analytics").addEventListener("click",loadPage_Analytics);
 }
+if(document.getElementById("btn-tickets-history") != null){
+    document.getElementById("btn-tickets-history").addEventListener("click",loadPage_TicketsHistory);
+}
 if(document.getElementById("btn-manage-users") != null){
     document.getElementById("btn-manage-users").addEventListener("click",loadPage_ManageUsers);
 }
@@ -30,6 +33,10 @@ function loadPage_HelpdeskGuide(){
 
 function loadPage_Analytics(){
     window.location = "analytics.html";
+}
+
+function loadPage_TicketsHistory(){
+    window.location = "historical-tickets-a.html";
 }
 
 function loadPage_ManageUsers(){
