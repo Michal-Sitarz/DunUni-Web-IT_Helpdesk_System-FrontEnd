@@ -101,7 +101,7 @@ hr{
         margin-left: 0;
         margin-right: 0;
     }
-
+    
 button{
     font-family: Tahoma;
     font-size: 100%;
@@ -119,7 +119,8 @@ input{
 }
 
 a:link, a:visited{
-    text-decoration: none;    
+    text-decoration: none;
+    color: #2F5496; /*navy*/    
 }
 a:hover{
     text-decoration: underline;    
@@ -153,12 +154,16 @@ h3 {
 
 #login-container{
     width: 300px;
-    height: 280px;
+    height: 300px;
     border: 1px solid #2F5496; /*lightblue*/;
     padding: 10px;
 }
+    #login-container hr{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
 #notifications-header{
-    
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -227,6 +232,13 @@ h3 {
 #btn-login{
     background-color: #798093; /*grey*/
 }
+#btn-create-account-submit{
+    background-color: #0070C0; /*darkslateblue*/
+}
+#btn-create-account-cancel{
+    margin-top: 0;
+}
+
 
 #btn-helpdesk-guide{
     background-color: #31B8F2; /*cornflowerblue*/

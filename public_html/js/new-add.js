@@ -1,6 +1,12 @@
+var addNewUser_CreateAccountItself = document.getElementById("btn-create-account-submit");
 var addNewUser = document.getElementById("btn-add-new-user-submit");
 var addNewDevice = document.getElementById("btn-add-new-device-submit");
 var allInputFields = document.getElementsByClassName("input-add-new");
+
+if(addNewUser_CreateAccountItself != null){
+    addNewUser_CreateAccountItself.addEventListener("click",submitNewUser);
+    document.getElementById("btn-create-account-cancel").addEventListener("click",cancelCreatingAccount);
+}
 
 if(addNewUser != null){
     addNewUser.addEventListener("click",submitNewUser);
@@ -8,6 +14,10 @@ if(addNewUser != null){
 }
 if(addNewDevice != null){
     addNewDevice.addEventListener("click",submitNewDevice);
+}
+
+function cancelCreatingAccount(){
+    window.location = "login.html";
 }
 
 function submitNewUser(){
@@ -19,6 +29,10 @@ function submitNewUser(){
                 +" has been added to the database.");
         //assign values to User object and update a database
         clearInputFields();
+        if(addNewUser_CreateAccountItself != null){
+            alert("You can now login using your new account's details.");
+            window.location = "login.html";
+        }
     }
     else{
         alert("Please fill in all the fields (all fields are mandatory!).");
@@ -55,3 +69,4 @@ function clearInputFields(){
         allInputFields[i].value = "";
     }
 }
+
