@@ -4,6 +4,9 @@ document.getElementById("btn-report-incident").addEventListener("click",loadPage
 document.getElementById("btn-new-request").addEventListener("click",loadPage_NewRequest);
 document.getElementById("btn-tickets-history").addEventListener("click",loadPage_TicketsHistory);
 
+document.getElementById("btn-notifications-close").addEventListener("click",close_Notifications);
+
+
 function loadPage_HelpdeskGuide(){
     window.location = "helpdesk-guide.html";
 }
@@ -20,3 +23,6 @@ function loadPage_TicketsHistory(){
     window.location = "historical-tickets.html";
 }
 
+function close_Notifications(){
+    document.getElementById("notifications-container").style.display = "none";
+}

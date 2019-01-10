@@ -18,7 +18,9 @@ if(document.getElementById("btn-add-new-user") != null){
 if(document.getElementById("btn-add-new-device") != null){
     document.getElementById("btn-add-new-device").addEventListener("click",loadPage_AddNewDEVICE);
 }
-
+if(document.getElementById("btn-notifications-close") != null){
+    document.getElementById("btn-notifications-close").addEventListener("click",close_Notifications);
+}
 
 
 // load page functions
@@ -46,3 +48,6 @@ function loadPage_AddNewDEVICE(){
     window.location = "manage-devices-add-new.html";
 }
 
+function close_Notifications(){
+    document.getElementById("notifications-container").style.display = "none";
+}

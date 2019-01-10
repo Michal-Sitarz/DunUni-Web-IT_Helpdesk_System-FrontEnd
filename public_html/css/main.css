@@ -16,6 +16,9 @@
 
 
 /* GLOBAL containers */
+html, body {
+    height: 100%;
+}
 
 body{
     margin: 0;
@@ -115,7 +118,7 @@ input{
     height:2em;
 }
 
-a:link{
+a:link, a:visited{
     text-decoration: none;    
 }
 a:hover{
@@ -129,6 +132,9 @@ table{
 h3 {
     color: #2F5496; /*navy*/
 }
+    #ticket h3{
+        color: navy;
+    }
 
 
 /* WRAPPERS & CONTAINERS */
@@ -151,10 +157,16 @@ h3 {
     border: 1px solid #2F5496; /*lightblue*/;
     padding: 10px;
 }
-
-#ticket h3{
-    color: navy;
+#notifications-header{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
+    #notifications-header h3{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 
 
 
@@ -237,6 +249,17 @@ h3 {
 #btn-tickets-history{
     background-color: #9DA5B5; /*teal*/
 }
+
+#btn-notifications-close{
+    width: min-content;
+    height: auto;
+    margin: 0;
+}
+    #btn-notifications-close i{
+        color: #C05046; /*firebrick*/
+    }
+    
+
     
 /* tickets list table */
 
