@@ -27,11 +27,13 @@ switch (currentFileName){
         document.getElementById("btn-ticket-note-add-new").addEventListener("click",postNewNote);
         break;
 }
+
 function selectDefaultTicketType(ticketType){
     let selectType = document.getElementById("ticket-select-type");
     selectType.value = ticketType;
     selectType.disabled = true;
 }
+
 function selectDefaultTicketStatus(){
     let selectStatus = document.getElementById("ticket-select-status");
     selectStatus.value = "Submitted";
@@ -49,7 +51,18 @@ function submitTicket(){
         alert("New ticket has been raised."); // and add new ticket entry to DB
         // clear fields
         clearAllUserInputFields();
-        window.location = "home.html";
+
+        //for prototype version only
+        if(currentFileName == "ticket-example.html")
+        {
+            window.location = "home.html";
+        }
+        else if(currentFileName == "ticket-example-a.html"){
+            window.location = "home-a.html";
+        }
+        else{
+            window.location = "home.html";
+        }
     }
 }
 
@@ -88,7 +101,17 @@ function clearAllUserInputFields(){
 }
 
 function cancelTicket(){
-    window.location = "home.html";
+    //for prototype version only
+    if(currentFileName == "ticket-example.html")
+    {
+        window.location = "home.html";
+    }
+    else if(currentFileName == "ticket-example-a.html"){
+        window.location = "home-a.html";
+    }
+    else{
+        window.location = "home.html";
+    }
 }
 
 // POST note functions
