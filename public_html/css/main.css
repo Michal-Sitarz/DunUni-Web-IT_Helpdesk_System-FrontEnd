@@ -218,6 +218,11 @@ h3 {
     color: white;
 }
 
+.input-add-new:disabled{
+    border: solid 1px grey;
+    background-color: #f2f2f2; /*lightgrey*/;
+}
+
 
 /* specific elements */
 

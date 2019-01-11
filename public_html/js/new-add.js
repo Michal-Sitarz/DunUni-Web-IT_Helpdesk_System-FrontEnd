@@ -16,6 +16,20 @@ if(addNewDevice != null){
     addNewDevice.addEventListener("click",submitNewDevice);
 }
 
+if(document.getElementById("btn-device-OK") != null){
+    document.getElementById("btn-device-OK").addEventListener("click",function(){
+        window.location = "manage-devices.html";
+    });
+}
+if(document.getElementById("btn-device-remove") != null){
+    document.getElementById("btn-device-remove").addEventListener("click",function(){
+        alert("Device has been removed from the database.");
+        clearInputFields();
+        window.location = "manage-devices.html";
+    });
+}
+
+
 function cancelCreatingAccount(){
     window.location = "login.html";
 }
