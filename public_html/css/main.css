@@ -276,6 +276,19 @@ h3 {
         color: #C05046; /*firebrick*/
     }
     
+#btn-user-account-update{
+    background-color: #31B8F2; /*cornflowerblue*/
+}
+#btn-user-account-reset-password{
+    background-color: #C05046; /*firebrick*/
+    width: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: 0;
+}
+#btn-user-account-delete{
+    background-color: #C05046; /*firebrick*/
+}
 
     
 /* tickets list table */
