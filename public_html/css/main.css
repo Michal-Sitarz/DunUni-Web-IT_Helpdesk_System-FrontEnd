@@ -290,6 +290,16 @@ h3 {
     background-color: #C05046; /*firebrick*/
 }
 
+#btn-device-save, #btn-device-cancel{
+    margin: 0;
+}
+#btn-device-save{
+    background-color: #0070C0; /*darkslateblue*/
+}
+#btn-device-remove{
+    background-color: #C05046; /*firebrick*/
+}
+
     
 /* tickets list table */
 

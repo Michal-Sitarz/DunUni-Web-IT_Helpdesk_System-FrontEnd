@@ -17,25 +17,21 @@ if(addNewDevice != null){
     addNewDevice.addEventListener("click",submitNewDevice);
 }
 
-if(document.getElementById("btn-device-OK") != null){
-    document.getElementById("btn-device-OK").addEventListener("click",function(){
-        window.location = "manage-devices.html";
-    });
-}
-if(document.getElementById("btn-device-remove") != null){
-    document.getElementById("btn-device-remove").addEventListener("click",function(){
-        alert("Device has been removed from the database.");
-        clearInputFields();
-        window.location = "manage-devices.html";
-    });
+if(document.getElementById("btn-device-save") != null){
+    document.getElementById("btn-device-save").addEventListener("click",updateDeviceDetails);
+    document.getElementById("btn-device-cancel").addEventListener("click",loadPage_ManageDevices);
+    document.getElementById("btn-device-remove").addEventListener("click",removeDevice);
 }
 
-//document.getElementById("btn-user-account-reset-password").addEventListener();
 if(document.getElementById("btn-user-account-update") != null){
     document.getElementById("btn-user-account-reset-password").addEventListener("click",resetUserPassword);
     document.getElementById("btn-user-account-update").addEventListener("click",updateUserAccount);
     document.getElementById("btn-user-account-cancel").addEventListener("click",loadPage_ManageUsers);
     document.getElementById("btn-user-account-delete").addEventListener("click",deleteUserAccount);
+}
+
+function loadPage_ManageDevices(){
+    window.location = "manage-devices.html";
 }
 
 function loadPage_ManageUsers(){
@@ -62,7 +58,7 @@ function clearInputFields(){
 }
 
 function submitNewDevice(){
-    if(validateInputFields() === true){
+    if(validateInputFields()){
         alert("New Device: "
                 +document.getElementById("add-new-device-hostname").value
                 +" ("
@@ -78,7 +74,7 @@ function submitNewDevice(){
 }
 
 function submitNewUser(){
-    if(validateInputFields() === true){
+    if(validateInputFields()){
         alert("New User: "
                 +document.getElementById("add-new-user-first-name").value
                 +" "
@@ -96,10 +92,25 @@ function submitNewUser(){
     }
 }
 
+function updateDeviceDetails(){
+    if(validateInputFields()){
+        // validate with database if the value actually changed and if there's a need to "update" value in the database
+        alert("Device's owner has been updated.");
+        loadPage_ManageDevices();
+    }else{
+        alert('Please assign user to the device.\nIf device is/goes back to IT stock, please use "IT stock" as owner name.');
+    }
+}
+
+function removeDevice(){
+    alert("Device has been removed from the database.");
+    clearInputFields();
+    loadPage_ManageDevices();
+}
+
 function updateUserAccount(){
     if(validateInputFields()){
         alert("User Account has been updated.");
-        clearInputFields();
         loadPage_ManageUsers();
     }
     else{
